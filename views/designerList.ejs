@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diseñadores</title>
+    <%- include('./modules/links.ejs') %>
+    <link rel="stylesheet" href="/stylesheets/list.css">
+  </head>
+  <body>
+    <header>
+      <%- include('./modules/navBar.ejs') %>
+    </header>
+      <main>
+        <div class="section-1 padding-y-section">
+          <div class="container-xxl">
+            <h2 class="text-center">· Diseñadores ·</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 flex-wrap">
+            <% result.forEach((elem)=>{ %>
+                <div class="col">
+                  <a class="text-decoration-none" href="/designer/profile/<%= `${elem.designer_id}` %>">
+                  <div class="card border-0 overflow-hidden rounded-0 mt-5">
+                      <img src="/images/designerImg/<%= elem.designer_img?elem.designer_img:'default.jpg'%>" alt="foto de diseñador">
+                      <div class="text text-dark mt-2">
+                        <h3 class="text-center fs-4"> <%= `${elem.name} ${elem.lastname}` %></h3>
+                      </div>
+                  </div>
+                  </a>
+                </div>
+              <% }) %> 
+            </div>
+          </div>
+        </div>
+      </main>
+      <%- include('./modules/footer.ejs') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+  </body>
+</html>

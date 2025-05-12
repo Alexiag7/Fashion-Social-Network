@@ -1,0 +1,41 @@
+.section-1 {
+  min-height: calc(100vh - 396px);
+
+ /*  .card {
+    &:hover {
+      
+
+      transform: scale(0.9); 
+    }
+ 
+  } */
+
+  img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+
+    &:hover {
+      filter: brightness(65%); 
+    }
+        
+  }
+
+ .text {
+    margin-bottom: 1rem;
+    
+    p {
+      font-size: 1.2rem;
+    }
+    
+  } 
+
+  button {
+    &:active, &:hover {
+      transform: scale(1);
+      font-weight: bold;
+    
+    }
+  }
+}
+

@@ -1,0 +1,52 @@
+.section-1 {
+  min-height: calc(100vh - 396px);
+
+   form {
+    width: max-content;
+
+    input {
+      width: 100%;
+      padding-block-start: 1.5rem;
+      border: 0;
+      border-bottom: 1px solid black;
+    
+      color: black;
+      font-size: 1rem;
+    } 
+
+    textarea {
+      border: 1px solid black;
+    }
+
+    .warning {
+      color: red;
+    }
+
+    
+    select {
+     margin-top: 1rem;
+      width: 100%;
+     border: 0;
+     border-bottom: 1px solid black;
+    }
+  }
+
+  .imagen {
+    padding: 0.5rem 1rem;
+    background-color: #2e1f17;
+
+    width: max-content;
+
+    &:hover {
+      background-color: #463329;
+      transform: scale(1.05); 
+      }
+
+      &:active {
+      transform: scale(0.95); 
+      }
+  }
+
+}
+
+

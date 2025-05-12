@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <%- include('./modules/links.ejs') %>
+  </head>
+  <body>
+    <header>
+      <%- include('./modules/navBar.ejs') %>
+    </header>
+      <!-- seccion 1 (portada) -->
+      <main>
+      <section class="section-1 d-flex flex-column justify-content-center">
+        <div class="container-xxl">
+            <article >
+            <div>
+              <p class="m-0 text-center">Be yourself · Be unforgettable · Be</p>
+                <h1 class="logo-1 fw-bold m-0"> Soléne</h1>
+            </div>
+            </article>
+        </div>
+      </section>
+      <!-- section 2 Nuestra Filosofía-->
+      <div class="section-2 padding-y-section">
+        <div class="container-xxl">
+          <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col d-flex justify-content-center align-items-center">
+              <video
+              src="/assets/video7.mp4"
+              autoplay
+              loop
+              muted
+              ></video>
+            </div>
+            <div class="col">
+              <article>
+                <h2 class="text-center mb-3">· Nuestra esencia ·</h2>
+                <p>En <span class="fst-italic">Soléne</span>, creemos que la moda es una forma de expresión personal, una extensión de lo que somos y sentimos.
+                Por eso, trabajamos con diseñadores de todo el mundo que comparten nuestra visión: crear piezas únicas, auténticas y llenas de intención.
+                <p>
+                  Cada colección es el resultado de un diálogo entre culturas, miradas y sensibilidades. Esta diversidad creativa nos permite ofrecer prendas que reflejan estilo, carácter y sofisticación sin esfuerzo.
+                </p>
+                <p>
+                  Queremos que al vestir <span class="fst-italic">Soléne</span>, te sientas libre, segura, auténtica. Que conectes con tu esencia y dejes huella, sin decir una palabra.
+                </p>
+                En cada costura, en cada detalle, hay un mensaje:
+                  <span class="fst-italic">Eres tú mismo. Eres inolvidable</span>.
+              </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- section 3 foto del mar-->
+      <section class="section-3 padding-y-section">
+      </section>
+      <!-- section 4 texto el mediterráneo -->
+      <div class="section-4 padding-y-section">
+        <div class="container-xxl">
+          <article>
+            <h2 class="mb-4 text-center">· El mediterráneo como inspiración ·</h2>
+            <p >Es más que un lugar: es una forma de ver la vida, un susurro constante de belleza, historia y calma. Desde sus aguas turquesas que abrazan la costa, hasta las callejuelas empedradas bañadas por la luz dorada del atardecer, cada rincón nos habla de elegancia natural y de una sofisticación que no necesita ser anunciada.</p>
+            <p>Nos inspiramos en su ritmo pausado, en el equilibrio entre lo ancestral y lo contemporáneo, en la armonía entre la tierra y el mar, entre lo simple y lo exquisito. Las tradiciones que han perdurado a lo largo del tiempo, los colores que nacen del paisaje —ocres, azules, blancos cálidos— y esa brisa constante que invita a la contemplación, son la esencia que nutre cada una de nuestras creaciones.</p>
+            <p>En cada colección, traducimos esa inspiración en piezas que evocan libertad, ligereza y una elegancia sin esfuerzo. Diseñamos para quienes valoran la autenticidad, para quienes entienden que el lujo verdadero está en lo sensorial, en lo que conecta con el alma.</p>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <%- include('./modules/footer.ejs') %>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

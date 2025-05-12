@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Lora';
+}
+
+.padding-y-section {
+  padding-block: 3rem;
+}
+header {
+  height: 64px;
+}
+p {
+  text-wrap: pretty;
+}
+
+
+button {
+  padding: 0.5rem 1rem; 
+  background-color: #2e1f17;
+  margin-inline: 0.5rem;
+
+  &:hover {
+  background-color: #463329;
+  transform: scale(1.05); 
+  }
+
+  &:active {
+  transform: scale(0.95); 
+  }
+  
+
+}
+
+

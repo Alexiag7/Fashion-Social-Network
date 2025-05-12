@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Perfil de un diseño</title>
+    <%- include('./modules/links.ejs') %>
+    <link rel="stylesheet" href="/stylesheets/designProfile.css" />
+  </head>
+  <body>
+    <header><%- include('./modules/navBar.ejs') %></header>
+    <main>
+      <section class="section-1 padding-y-section">
+        <div class="container-xxl">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2">
+            <div class="col d-flex justify-content-center">
+              <img
+                
+                src="/images/designImg/<%= result.design_img?result.design_img:'default.jpg'%>"
+                alt=""
+              />
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+              <article class="my-5">
+                
+                <div class="text">
+                  <h2><%= result.design_name %></h2>
+                  <p><%= result.genre %></p>
+                  <span class="fw-bold">Descripción:</span>
+                  <p><%= result.description %></p>
+                  <span class="fw-bold">Composición:</span>
+                  <p><%= result.main_material %></p>
+                  <span class="fw-bold">Color:</span>
+                  <p><%= `${result.main_color}` %></p>
+                </div>
+                <button
+                  class="text-light"
+                  onclick="window.location.href='/design/editDesignForm/<%= result.design_id%>'"
+                >
+                  Editar
+                </button>
+                <button
+                  class="text-light"
+                  onclick="window.location.href='/design/delLogic/<%= result.design_id%>/<%= result.designer_id%>'"
+                >
+                  <!--  Eliminar lógico
+            </button>
+            <button class="text-light"
+            onclick="window.location.href='/design/delTotal/<%= result.design_id%>/<%= result.designer_id%>'"
+            > -->
+                  Eliminar
+                </button>
+              </article>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <%- include('./modules/footer.ejs') %>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

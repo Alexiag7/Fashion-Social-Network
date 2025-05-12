@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Colección</title>
+    <%- include('./modules/links.ejs') %>
+    <link rel="stylesheet" href="/stylesheets/list.css">
+  </head>
+  <body>
+    <header>
+      <%- include('./modules/navBar.ejs') %>
+    </header>
+    <main>
+      <div class="section-1 padding-y-section">
+        <div class="container-xxl">
+        <h2 class="text-center">· Spring/Summer '25 ·</h2>
+        <div class="d-flex align-items-center justify-content-center mt-3">
+          <button class="bg-transparent" onclick="window.location.href='/design/designList'">Todo</button>
+          <div>|</div>
+          <button class="bg-transparent" onclick="window.location.href='/design/designListMan'">Hombre</button>
+          <div>|</div>
+          <button class="bg-transparent" onclick="window.location.href='/design/designListWoman'">Mujer</button>
+        </div>
+        <p class="text-uppercase mt-4"><%= message %></p>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 flex-wrap">
+          <% result.forEach((elem)=>{ %>
+            <div class="col">
+              <div class="card border-0 rounded-0 mt-5 d-flex justify-content-center align-items-center">
+              <a class="text-decoration-none" href="/design/profile/<%= `${elem.design_id}` %>">
+                  <img src="/images/designImg/<%= elem.design_img?elem.design_img:'default.jpg'%>" alt="">
+                  <div class="text text-dark">
+                    <p class="text-start"> <%= `${elem.design_name}` %></p>
+                  </div>
+                 <!--  <div class="text">
+                    <h2> <%= elem.name %></h2>
+                    <p> <%= elem.garment %></p>
+                    <p> <%= elem.genre %></p>
+                    <p><%= elem.description %></p>
+                    <p><%= elem.main_material %></p>
+                    <p><%= elem.main_color%></p>
+                  </div>
+                </div> -->
+              </a>
+            </div>
+          </div>
+          <% }) %>
+            
+      </div>
+    </div>
+      </div>
+    </main>
+
+      <%- include('./modules/footer.ejs') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+  </body>
+</html>

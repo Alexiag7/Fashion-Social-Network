@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Editar diseñador</title>
+    <%- include('./modules/links.ejs') %>
+    <link rel="stylesheet" href="/stylesheets/registerForm.css">
+
+  </head>
+  <body>
+    <header>
+      <%- include('./modules/navBar.ejs') %>
+    </header>
+    <main>
+        <section class="section-1 padding-y-section">
+          <div class="container-xxl">
+            <div class="row justify-content-center align-items-center">
+            <h3 class="text-center mb-3">Edita tu perfil</h3>
+            <form class="d-flex flex-column align-items-center" action="/designer/edit/<%=result.designer_id%>" method="post" enctype="multipart/form-data">
+              <div class="mb-3">
+                <label >
+                <input
+                type="text"
+                name="name"
+                aria-describedby="nameHelp" 
+                placeholder="Nombre"
+                value="<%=result.name%>">
+
+              </label>
+              </div>
+              <div class="mb-3">
+                <label>
+                <input
+                type="text"
+                name="lastname"
+                aria-describedby="lastnameHelp" 
+                placeholder="Apellidos"
+                value="<%=result.lastname%>">
+
+              </label>
+              </div>
+              <div class="mb-3">
+                <label>
+                <input
+                type="text"
+                name="city"
+                aria-describedby="cityHelp" 
+                placeholder="Ciudad"
+                value="<%=result.city%>">
+              </label>
+              </div>
+              <div class="mb-3 d-flex flex-column ">
+                <label for="description">Descripción</label>
+                <textarea
+                class="p-3"
+                rows="5"
+                cols="15"
+                type="text"
+                name="description"
+                id="description"
+                aria-describedby="nameHelp" 
+                ><%=result.description%>
+              </textarea>
+
+              </div>
+              <div class="mb-3">
+                <label>
+                <input
+                type="text"
+                name="phone_number"
+                aria-describedby="phone_numberHelp" 
+                placeholder="Teléfono"
+                value="<%=result.phone_number%>">
+
+              </label>
+              </div>
+              <div class="mb-3">
+                <label class="imagen text-light mb-3" for="inputImg">Sube una foto</label>
+                <input
+                type="file"
+                name="img"
+                id="inputImg"
+                aria-describedby="imgHelp"
+                hidden>
+              </div>
+              <div >
+                <button class="text-light" type="submit">Enviar</button>
+                <button class="text-light" type="button" onclick="window.location.href='/designer/profileAdmin/<%=result.designer_id%>'">Cancelar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        </section>
+      </main>
+  
+  
+  
+      <%- include('./modules/footer.ejs') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+  </body>
+</html>
+

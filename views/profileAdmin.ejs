@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perfil de administrador</title>
+    <%- include('./modules/links.ejs') %>
+    <link rel="stylesheet" href="/stylesheets/designerProfile.css">
+  </head>
+  <body>
+    <header>
+      <%- include('./modules/navBar.ejs') %>
+    </header>
+    <main>
+      <section class="section-1 padding-y-section">
+          <div class="container-xxl">
+            <div class="row row-cols-1 ro-cols-md-2 row-cols-lg-2">
+              <div class="col d-flex flex-column justify-content-center align-items-center">
+                <img class="w-75" src="/images/designerImg/<%= finalResult.designer_img?finalResult.designer_img:'default.jpg'%>" alt="">
+              </div>
+              <div class="col d-flex flex-column justify-content-center">
+                <article>
+                <h1 class="text-center my-3"><%= `· ${finalResult.name} ${finalResult.lastname} ·` %></h1>
+                <p class="fw-bold fst-italic"><%= finalResult.city %></p>
+                <div class="about">
+                  <p class="fw-bold">Un poco sobre mí:</p>
+                  <p><%= finalResult.description %></p>
+                </div>
+                <div class="contact">
+                  <p class="fw-bold">Habla conmigo:</p>
+                  <p>· <%= finalResult.email %></p>
+                  <p>· <%= finalResult.phone_number %></p>
+                </div>
+              </article>
+              <div class="buttons mt-3">
+                <button class="text-light" onclick="window.location.href='/designer/editForm/<%= finalResult.designer_id%>'">Editar</button>
+                <button class="text-light" onclick="window.location.href='/designer/delLogic/<%= finalResult.designer_id%>'">Eliminar</button>
+                <button class="text-light" onclick="window.location.href='/design/addDesignForm/<%= finalResult.designer_id%>'">Añadir diseño</button>
+              </div>
+            </div>
+          </div>
+           
+                
+              </div>
+
+        </section>
+        <section class="section-2">
+          <div class="container-xxl"> 
+            <h2 class="text-center">Mis diseños</h2>         
+            
+          <div class="row row-cols-1 align-items-center justify-content-center row-cols-md-2 row-cols-lg-4 flex-wrap ">
+              <% finalResult.designs.forEach((elem)=>{ %>
+                <div class="col d-flex align-items-center justify-content-center">
+                  <a class="text-decoration-none" href="/design/profileAdmin/<%= elem.design_id %>">
+                    <div class="card rounded-0 mt-5">
+                      <img class=" mb-3" src="/images/designImg/<%= elem.design_img?elem.design_img:'default.jpg'%>" alt="">
+                    </div>
+                  </a>
+                </div>
+              <% }) %>
+            </div>
+          </div>
+        </section>
+      </main>
+  
+  
+  
+    </div>
+      <%- include('./modules/footer.ejs') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+  </body>
+</html>

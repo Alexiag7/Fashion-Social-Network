@@ -2,7 +2,7 @@
 
 Es una red social innovadora diseñada exclusivamente para diseñadores. Un espacio donde los creativos pueden mostrar su talento y construir una comunidad sólida en torno al diseño. 
 
-Esta desarrollada con tecnologías como Node.js, Express y MySQL, la plataforma incorpora funciones clave como creación y eliminación de perfiles personalizados, relaciones entre el diseñador y sus diseños, validaciones seguras y carga de imágenes.
+Esta desarrollada con tecnologías como Node.js, Express y MySQL, la plataforma incorpora funciones clave como creación y eliminación de perfiles personalizados, relaciones entre el diseñador y sus diseños, validaciones de formularios y carga de imágenes.
 
 ## 📽️ Conoce el Proyecto
 

@@ -41,3 +41,12 @@ Esta desarrollada con tecnologías como Node.js, Express y MySQL, la plataforma 
 - CSS3
 - Bootstrap
 - JavaScript
+
+- ## 📸 Capturas app
+
+![Pantalla home](screenshots/home.png)
+![Pantalla diseñadores](screenshots/designers.png)
+![Pantalla coleccion](screenshots/collection.png)
+![Pantalla login](screenshots/login.png)
+![Pantalla editar diseño](screenshots/editdesign.png)
+

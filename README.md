@@ -42,7 +42,57 @@ Esta desarrollada con tecnologías como Node.js, Express y MySQL, la plataforma 
 - Bootstrap
 - JavaScript
 
-- ## 📸 Capturas app
+---
+
+## 🚀 Despliegue del Proyecto
+
+
+### ✅ 1. Instala Node.js
+Descárgalo desde: [https://nodejs.org](https://nodejs.org)
+
+
+### 🛠️ 2. Instala MySQL y MySQL Workbench
+Descarga e instala desde: [https://dev.mysql.com/downloads/](https://dev.mysql.com/downloads/)
+
+
+### 📦 3. Clona el repositorio
+
+Clona este repositorio en tu PC local y accede a la carpeta del proyecto:
+
+```bash
+git clone https://github.com/Alexiag7/Fashion-Social-Network.git
+cd Fashion-Social-Network
+```
+
+### 📥 4. Instalar dependencias
+
+Dentro de la carpeta del proyecto, ejecuta el siguiente comando para instalar todas las dependencias necesarias:
+
+```bash
+npm install
+```
+
+### 🗄️ 5. Crea la base de datos en MySQL
+
+Abre MySQL Workbench
+Ejecuta el script SQL que está en la carpeta config/fashion.sql
+
+### ▶️ 6. Levantar el servidor
+
+Para iniciar la aplicación en modo desarrollo, ejecuta el siguiente comando:
+
+```bash
+npm run dev
+```
+
+### 🌐 8. Abre en el navegador
+
+Accede a la app desde:
+http://localhost:4000
+
+---
+
+## 📸 Capturas app
 
 ![Pantalla home](screenshots/home.png)
 ![Pantalla diseñadores](screenshots/designers.png)
